@@ -1,6 +1,7 @@
 import Image from "next/image";
 
-const emailUrl = "mailto:info@escuelacizalla.es?subject=Consulta%20sobre%20cursos%20de%20encuadernaci%C3%B3n";
+const whatsappUrl = "https://wa.me/34629266370?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20cursos%20de%20encuadernaci%C3%B3n%20y%20las%20pr%C3%B3ximas%20plazas.";
+const gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=info%40escuelacizalla.es&su=Consulta%20sobre%20cursos%20de%20encuadernaci%C3%B3n";
 const mapsUrl = "https://www.google.com/maps/search/?api=1&query=Escuela+Cizalla+Doctor+Esquerdo+12+Madrid";
 
 function Arrow() {
@@ -53,7 +54,7 @@ export default function Home() {
           <a href="#taller">El taller</a>
           <a href="#horarios">Horarios</a>
         </nav>
-        <a className="header-cta" href={emailUrl}>Consultar plaza <Arrow /></a>
+        <a className="header-cta" href={whatsappUrl} target="_blank" rel="noreferrer">Consultar plaza <Arrow /></a>
       </header>
 
       <section className="hero" id="inicio">
@@ -88,7 +89,7 @@ export default function Home() {
               <span>{path.number}</span>
               <div><h3>{path.title}</h3><p>{path.text}</p></div>
               <strong>{path.note}</strong>
-              <a href={emailUrl} aria-label={`Consultar: ${path.title}`}><Arrow /></a>
+              <a href={whatsappUrl} target="_blank" rel="noreferrer" aria-label={`Consultar: ${path.title}`}><Arrow /></a>
             </article>
           ))}
         </div>
@@ -143,7 +144,7 @@ export default function Home() {
             <p><span>MA—JU</span><strong>16:30 — 20:30</strong></p>
           </div>
           <p>Los grupos se organizan según las plazas disponibles. Escríbenos y te propondremos el horario y la modalidad que mejor encajen contigo.</p>
-          <a className="primary-button" href={emailUrl}><Mail /> Consultar disponibilidad</a>
+          <a className="primary-button" href={whatsappUrl} target="_blank" rel="noreferrer"><Mail /> Consultar por WhatsApp</a>
         </div>
       </section>
 
@@ -153,8 +154,8 @@ export default function Home() {
           <h2>VEN A CONOCER<br /><em>EL TALLER.</em></h2>
         </div>
         <div className="contact-actions">
-          <a href={emailUrl}><span>Escribir por email</span><small>info@escuelacizalla.es</small><Arrow /></a>
-          <a href="tel:+34629266370"><span>Llamar al taller</span><small>629 266 370</small><Arrow /></a>
+          <a href={whatsappUrl} target="_blank" rel="noreferrer"><span>Escribir por WhatsApp</span><small>Mensaje ya preparado</small><Arrow /></a>
+          <a href={gmailUrl} target="_blank" rel="noreferrer"><span>Abrir Gmail</span><small>info@escuelacizalla.es</small><Arrow /></a>
           <a href={mapsUrl}><span>Abrir en Maps</span><small>Doctor Esquerdo, 12 · Madrid</small><Arrow /></a>
         </div>
       </section>
